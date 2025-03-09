@@ -1,10 +1,14 @@
 # Considerente Generale #
 
 ### Diagrama Logica ###
-"C:\Users\moise\Desktop\cc diagrama.png"
+
+<img width="960" alt="cc diagrama" src="https://github.com/user-attachments/assets/21a33b71-5b36-43df-9b3a-2a9418ab599d" />
+
 
 ### Design Mock-up ###
-`Not available`
+
+![cc mockup](https://github.com/user-attachments/assets/285f9395-e19f-4903-b079-6a3f9ed0d6a3)
+
 
 ### Stack de tehnologii ###
 - Versiune .NET: 8.0
@@ -13,38 +17,28 @@
 
 ### Structura Aplicatiei ###
 Solutia este formata din 2 proiecte:
-- `StudiuDeCaz1.Backend` => Proiect tip librarie de clase. Contine clasa `Contact` si `ContactFactory`, care impreuna gestioneaza datele datele si stocarea lor.
-- `StudiuDeCaz1.Frondend` => Proiect de tip Windows Forms Application. Contine diverse `Forms` si `UserControls` construite in jurul claselor de backend si gestioneaza rularea aplicatiei.
+- `CurrencyConverterBackend` => Proiect tip librarie de clase. Contine clasa `Currency` si `CurrencyRepository`, care impreuna gestioneaza datele si stocarea lor.
+- `CurrencyConverterItSchoolProject` => Proiect de tip Windows Forms Application. Contine diverse `Forms` si `UserControls` construite in jurul claselor de backend si gestioneaza rularea aplicatiei.
 
 ### Limitari ###
+Lista valutară este fixă hard codată iar lista ultimelor conversii este un mecanism temporar care se actualizează după apăsarea butonului CONVERT. 
 Aplicatia nu dispune de mecanism de import / export de date.
-Contactele pre-populate in aplicatie provin dintr-un mecanism temporar, executat inainte de incarcarea ferestrei principale.
 
-![image](https://github.com/user-attachments/assets/a27d3cbc-7f6e-46cd-95a8-e1abe285c5fe)
+
+![Schermafbeelding 2025-03-09 213302](https://github.com/user-attachments/assets/71f0a419-58dd-4ed7-a943-088a71fa39b9)
+![Schermafbeelding 2025-03-09 213106](https://github.com/user-attachments/assets/fdc4d0e1-9a5c-4559-991b-f48a371bf8cf)
+
 
 # Prezentarea Aplicatiei Grafice #
 
 ### Fereastra Principala ###
 Ii permite utilizatorului sa:
-- vizualizeze toate contactele existente, sub forma de lista
-- adauge un contact nou (prin apasarea simbolul `+` din partea dreapta-sus a ferestrei)
-- editeze oricare dintre contactele disponibile (prin apasarea benzii verzi a oricarui contact)
+- vizualizeze toate valutele existente, sub forma de lista abreviata in combobox.
+- adauge suma care vrea sa o schimbe.
+- vizualizeze care este valoarea schimbului valutar.
+- aleaga prin intermediul unor butoane conversiile populare.
+- vizualizeze care sunt ultimele schimburi valutare.
+![Schermafbeelding 2025-03-09 203635](https://github.com/user-attachments/assets/01081b70-1572-4cb1-bcfc-f31b92b074fa)
+![Schermafbeelding 2025-03-09 215409](https://github.com/user-attachments/assets/19b18259-fa53-41d0-b4e5-7577c665c101)
 
-Cardurile contactelor ofera de asemenea si urmatoarele functii:
-- **Trimite email** (`mailto:`) - prin apasarea link-ului cu emailul unui contact. Acest buton va porni aplicatia implicita de mail a computerului.
-- **Apeleaza** (`tel:`) - prin apasarea link-ului cu numarul de telefon al unui contact. Acest buton va porni aplicatia implicita de apel a computerului.
 
-![image](https://github.com/user-attachments/assets/1938b581-45d1-45ea-a628-a5605a52fd72)
-
-### Adaugare / Editare Contact ###
-Ferestrele de adaugare si editare contact folosesc acelasi Form.
-Elementele din grupul `Needed` sunt obligatorii, in timp ce cele din `Optional` pot fi omise.
-Utilizatorul are la dispozitie urmatoarele shortcut-uri:
-- `Enter` => Actioneaza butonul `Submit` (verifica datele de intrare si le executa daca este posibil).
-- `Esc` => Actioneaza butonul `Cancel` (inchide Fereastra deschisa).
-
-![image](https://github.com/user-attachments/assets/f38a338c-8c9a-43a0-9c86-b51e44328fe6)
-
-In modul de editare, campurile de text sunt pre-completate cu datele deja existente ale contactului selectat: 
-
-![image](https://github.com/user-attachments/assets/e1b2e1f5-3791-454e-8848-e312969fc656)
